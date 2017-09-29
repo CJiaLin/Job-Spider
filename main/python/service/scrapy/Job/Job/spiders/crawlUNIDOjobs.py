@@ -153,11 +153,8 @@ class UNIDOjobLink(scrapy.Spider):
 
     def savepdf(self, response):
         items = response.meta['items']
-        with open('../' + items['PDF_name'], 'wb') as f:
+        with open('./UNIDOjobs/' + items['PDF_name'], 'wb') as f:
             f.write(response.body)
-
-
-
 
     def _inititem(self):
         '''

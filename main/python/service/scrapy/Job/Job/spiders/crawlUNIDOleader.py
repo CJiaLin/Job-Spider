@@ -52,7 +52,7 @@ class UNIDOleader(scrapy.Spider):
 
     def savepdf(self, response):
         item = response.meta['item']
-        with open('../' + item['pdf_name'], 'wb') as f:
+        with open('./UNIDOleaders/' + item['pdf_name'], 'wb') as f:
             f.write(response.body)
 
     def _inititem(self):
